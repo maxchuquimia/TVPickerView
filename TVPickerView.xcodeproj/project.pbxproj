@@ -7,25 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5027B9AF1BDC69BE00D3F7FC /* TVPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5027B9AE1BDC69BE00D3F7FC /* TVPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5027B9BA1BDC69EA00D3F7FC /* TVPickerMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B9B61BDC69EA00D3F7FC /* TVPickerMover.swift */; };
-		5027B9BB1BDC69EA00D3F7FC /* TVPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B9B71BDC69EA00D3F7FC /* TVPickerView.swift */; };
-		5027B9BC1BDC69EA00D3F7FC /* TVPickerViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B9B81BDC69EA00D3F7FC /* TVPickerViewExtensions.swift */; };
-		5027B9BD1BDC69EA00D3F7FC /* TVPickerViewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B9B91BDC69EA00D3F7FC /* TVPickerViewInterfaces.swift */; };
+		5027B99B1BDB5FB800D3F7FC /* TVPickerMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B99A1BDB5FB800D3F7FC /* TVPickerMover.swift */; };
+		5027B99D1BDC3A3A00D3F7FC /* TVPickerViewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B99C1BDC3A3A00D3F7FC /* TVPickerViewInterfaces.swift */; };
+		5027B9A01BDC5F2D00D3F7FC /* TVPickerViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B99F1BDC5F2D00D3F7FC /* TVPickerViewExtensions.swift */; };
+		5027B9D11BDC72AA00D3F7FC /* TVPickerViewFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 5027B9D01BDC72AA00D3F7FC /* TVPickerViewFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5027B9D61BDC72B200D3F7FC /* TVPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55621E8A1BD725AB00D388B5 /* TVPickerView.swift */; };
+		5027B9D71BDC72B200D3F7FC /* TVPickerViewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B99C1BDC3A3A00D3F7FC /* TVPickerViewInterfaces.swift */; };
+		5027B9D81BDC72B200D3F7FC /* TVPickerMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B99A1BDB5FB800D3F7FC /* TVPickerMover.swift */; };
+		5027B9D91BDC72B200D3F7FC /* TVPickerViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5027B99F1BDC5F2D00D3F7FC /* TVPickerViewExtensions.swift */; };
+		55621E6E1BD7259100D388B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55621E6D1BD7259100D388B5 /* AppDelegate.swift */; };
+		55621E701BD7259100D388B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55621E6F1BD7259100D388B5 /* ViewController.swift */; };
+		55621E731BD7259100D388B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55621E711BD7259100D388B5 /* Main.storyboard */; };
+		55621E751BD7259100D388B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55621E741BD7259100D388B5 /* Assets.xcassets */; };
+		55621E801BD7259100D388B5 /* TVPickerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55621E7F1BD7259100D388B5 /* TVPickerViewTests.swift */; };
+		55621E8B1BD725AB00D388B5 /* TVPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55621E8A1BD725AB00D388B5 /* TVPickerView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		55621E7C1BD7259100D388B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55621E621BD7259100D388B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55621E691BD7259100D388B5;
+			remoteInfo = TVPickerView;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		5027B9AB1BDC69BE00D3F7FC /* TVPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TVPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5027B9AE1BDC69BE00D3F7FC /* TVPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVPickerView.h; sourceTree = "<group>"; };
-		5027B9B01BDC69BE00D3F7FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5027B9B61BDC69EA00D3F7FC /* TVPickerMover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPickerMover.swift; sourceTree = "<group>"; };
-		5027B9B71BDC69EA00D3F7FC /* TVPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPickerView.swift; sourceTree = "<group>"; };
-		5027B9B81BDC69EA00D3F7FC /* TVPickerViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPickerViewExtensions.swift; sourceTree = "<group>"; };
-		5027B9B91BDC69EA00D3F7FC /* TVPickerViewInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPickerViewInterfaces.swift; sourceTree = "<group>"; };
+		5027B99A1BDB5FB800D3F7FC /* TVPickerMover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPickerMover.swift; sourceTree = "<group>"; };
+		5027B99C1BDC3A3A00D3F7FC /* TVPickerViewInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPickerViewInterfaces.swift; sourceTree = "<group>"; };
+		5027B99F1BDC5F2D00D3F7FC /* TVPickerViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPickerViewExtensions.swift; sourceTree = "<group>"; };
+		5027B9CE1BDC72AA00D3F7FC /* TVPickerViewFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TVPickerViewFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5027B9D01BDC72AA00D3F7FC /* TVPickerViewFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVPickerViewFramework.h; sourceTree = "<group>"; };
+		5027B9D21BDC72AA00D3F7FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55621E6A1BD7259100D388B5 /* TVPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55621E6D1BD7259100D388B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55621E6F1BD7259100D388B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55621E721BD7259100D388B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55621E741BD7259100D388B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55621E761BD7259100D388B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55621E7B1BD7259100D388B5 /* TVPickerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVPickerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55621E7F1BD7259100D388B5 /* TVPickerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVPickerViewTests.swift; sourceTree = "<group>"; };
+		55621E811BD7259100D388B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55621E8A1BD725AB00D388B5 /* TVPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5027B9A71BDC69BE00D3F7FC /* Frameworks */ = {
+		5027B9CA1BDC72AA00D3F7FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55621E671BD7259100D388B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55621E781BD7259100D388B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,57 +77,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5027B9A11BDC69BE00D3F7FC = {
+		5027B99E1BDC3E9100D3F7FC /* TVPickerView Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5027B9AD1BDC69BE00D3F7FC /* TVPickerView */,
-				5027B9AC1BDC69BE00D3F7FC /* Products */,
+				55621E8A1BD725AB00D388B5 /* TVPickerView.swift */,
+				5027B99C1BDC3A3A00D3F7FC /* TVPickerViewInterfaces.swift */,
+				5027B99A1BDB5FB800D3F7FC /* TVPickerMover.swift */,
+				5027B99F1BDC5F2D00D3F7FC /* TVPickerViewExtensions.swift */,
+			);
+			name = "TVPickerView Sources";
+			sourceTree = "<group>";
+		};
+		5027B9CF1BDC72AA00D3F7FC /* TVPickerViewFramework */ = {
+			isa = PBXGroup;
+			children = (
+				5027B9D01BDC72AA00D3F7FC /* TVPickerViewFramework.h */,
+				5027B9D21BDC72AA00D3F7FC /* Info.plist */,
+			);
+			path = TVPickerViewFramework;
+			sourceTree = "<group>";
+		};
+		55621E611BD7259100D388B5 = {
+			isa = PBXGroup;
+			children = (
+				55621E6C1BD7259100D388B5 /* TVPickerView */,
+				55621E7E1BD7259100D388B5 /* TVPickerViewTests */,
+				5027B9CF1BDC72AA00D3F7FC /* TVPickerViewFramework */,
+				55621E6B1BD7259100D388B5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5027B9AC1BDC69BE00D3F7FC /* Products */ = {
+		55621E6B1BD7259100D388B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5027B9AB1BDC69BE00D3F7FC /* TVPickerView.framework */,
+				55621E6A1BD7259100D388B5 /* TVPickerView.app */,
+				55621E7B1BD7259100D388B5 /* TVPickerViewTests.xctest */,
+				5027B9CE1BDC72AA00D3F7FC /* TVPickerViewFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5027B9AD1BDC69BE00D3F7FC /* TVPickerView */ = {
+		55621E6C1BD7259100D388B5 /* TVPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				5027B9AE1BDC69BE00D3F7FC /* TVPickerView.h */,
-				5027B9B01BDC69BE00D3F7FC /* Info.plist */,
-				5027B9B61BDC69EA00D3F7FC /* TVPickerMover.swift */,
-				5027B9B71BDC69EA00D3F7FC /* TVPickerView.swift */,
-				5027B9B81BDC69EA00D3F7FC /* TVPickerViewExtensions.swift */,
-				5027B9B91BDC69EA00D3F7FC /* TVPickerViewInterfaces.swift */,
+				55621E6D1BD7259100D388B5 /* AppDelegate.swift */,
+				55621E6F1BD7259100D388B5 /* ViewController.swift */,
+				5027B99E1BDC3E9100D3F7FC /* TVPickerView Sources */,
+				55621E711BD7259100D388B5 /* Main.storyboard */,
+				55621E741BD7259100D388B5 /* Assets.xcassets */,
+				55621E761BD7259100D388B5 /* Info.plist */,
 			);
 			path = TVPickerView;
+			sourceTree = "<group>";
+		};
+		55621E7E1BD7259100D388B5 /* TVPickerViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				55621E7F1BD7259100D388B5 /* TVPickerViewTests.swift */,
+				55621E811BD7259100D388B5 /* Info.plist */,
+			);
+			path = TVPickerViewTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5027B9A81BDC69BE00D3F7FC /* Headers */ = {
+		5027B9CB1BDC72AA00D3F7FC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5027B9AF1BDC69BE00D3F7FC /* TVPickerView.h in Headers */,
+				5027B9D11BDC72AA00D3F7FC /* TVPickerViewFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5027B9AA1BDC69BE00D3F7FC /* TVPickerView */ = {
+		5027B9CD1BDC72AA00D3F7FC /* TVPickerViewFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5027B9B31BDC69BE00D3F7FC /* Build configuration list for PBXNativeTarget "TVPickerView" */;
+			buildConfigurationList = 5027B9D51BDC72AA00D3F7FC /* Build configuration list for PBXNativeTarget "TVPickerViewFramework" */;
 			buildPhases = (
-				5027B9A61BDC69BE00D3F7FC /* Sources */,
-				5027B9A71BDC69BE00D3F7FC /* Frameworks */,
-				5027B9A81BDC69BE00D3F7FC /* Headers */,
-				5027B9A91BDC69BE00D3F7FC /* Resources */,
+				5027B9C91BDC72AA00D3F7FC /* Sources */,
+				5027B9CA1BDC72AA00D3F7FC /* Frameworks */,
+				5027B9CB1BDC72AA00D3F7FC /* Headers */,
+				5027B9CC1BDC72AA00D3F7FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVPickerViewFramework;
+			productName = TVPickerViewFramework;
+			productReference = 5027B9CE1BDC72AA00D3F7FC /* TVPickerViewFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		55621E691BD7259100D388B5 /* TVPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55621E841BD7259100D388B5 /* Build configuration list for PBXNativeTarget "TVPickerView" */;
+			buildPhases = (
+				55621E661BD7259100D388B5 /* Sources */,
+				55621E671BD7259100D388B5 /* Frameworks */,
+				55621E681BD7259100D388B5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -93,42 +185,86 @@
 			);
 			name = TVPickerView;
 			productName = TVPickerView;
-			productReference = 5027B9AB1BDC69BE00D3F7FC /* TVPickerView.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 55621E6A1BD7259100D388B5 /* TVPickerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55621E7A1BD7259100D388B5 /* TVPickerViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55621E871BD7259100D388B5 /* Build configuration list for PBXNativeTarget "TVPickerViewTests" */;
+			buildPhases = (
+				55621E771BD7259100D388B5 /* Sources */,
+				55621E781BD7259100D388B5 /* Frameworks */,
+				55621E791BD7259100D388B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55621E7D1BD7259100D388B5 /* PBXTargetDependency */,
+			);
+			name = TVPickerViewTests;
+			productName = TVPickerViewTests;
+			productReference = 55621E7B1BD7259100D388B5 /* TVPickerViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5027B9A21BDC69BE00D3F7FC /* Project object */ = {
+		55621E621BD7259100D388B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Chuquimian Productions";
 				TargetAttributes = {
-					5027B9AA1BDC69BE00D3F7FC = {
+					5027B9CD1BDC72AA00D3F7FC = {
 						CreatedOnToolsVersion = 7.1;
+					};
+					55621E691BD7259100D388B5 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					55621E7A1BD7259100D388B5 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 55621E691BD7259100D388B5;
 					};
 				};
 			};
-			buildConfigurationList = 5027B9A51BDC69BE00D3F7FC /* Build configuration list for PBXProject "TVPickerView" */;
+			buildConfigurationList = 55621E651BD7259100D388B5 /* Build configuration list for PBXProject "TVPickerView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 5027B9A11BDC69BE00D3F7FC;
-			productRefGroup = 5027B9AC1BDC69BE00D3F7FC /* Products */;
+			mainGroup = 55621E611BD7259100D388B5;
+			productRefGroup = 55621E6B1BD7259100D388B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5027B9AA1BDC69BE00D3F7FC /* TVPickerView */,
+				55621E691BD7259100D388B5 /* TVPickerView */,
+				55621E7A1BD7259100D388B5 /* TVPickerViewTests */,
+				5027B9CD1BDC72AA00D3F7FC /* TVPickerViewFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5027B9A91BDC69BE00D3F7FC /* Resources */ = {
+		5027B9CC1BDC72AA00D3F7FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55621E681BD7259100D388B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55621E751BD7259100D388B5 /* Assets.xcassets in Resources */,
+				55621E731BD7259100D388B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55621E791BD7259100D388B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,21 +274,99 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5027B9A61BDC69BE00D3F7FC /* Sources */ = {
+		5027B9C91BDC72AA00D3F7FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5027B9BC1BDC69EA00D3F7FC /* TVPickerViewExtensions.swift in Sources */,
-				5027B9BB1BDC69EA00D3F7FC /* TVPickerView.swift in Sources */,
-				5027B9BD1BDC69EA00D3F7FC /* TVPickerViewInterfaces.swift in Sources */,
-				5027B9BA1BDC69EA00D3F7FC /* TVPickerMover.swift in Sources */,
+				5027B9D81BDC72B200D3F7FC /* TVPickerMover.swift in Sources */,
+				5027B9D71BDC72B200D3F7FC /* TVPickerViewInterfaces.swift in Sources */,
+				5027B9D91BDC72B200D3F7FC /* TVPickerViewExtensions.swift in Sources */,
+				5027B9D61BDC72B200D3F7FC /* TVPickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55621E661BD7259100D388B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5027B9A01BDC5F2D00D3F7FC /* TVPickerViewExtensions.swift in Sources */,
+				55621E8B1BD725AB00D388B5 /* TVPickerView.swift in Sources */,
+				55621E701BD7259100D388B5 /* ViewController.swift in Sources */,
+				5027B99D1BDC3A3A00D3F7FC /* TVPickerViewInterfaces.swift in Sources */,
+				55621E6E1BD7259100D388B5 /* AppDelegate.swift in Sources */,
+				5027B99B1BDB5FB800D3F7FC /* TVPickerMover.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55621E771BD7259100D388B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55621E801BD7259100D388B5 /* TVPickerViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		55621E7D1BD7259100D388B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55621E691BD7259100D388B5 /* TVPickerView */;
+			targetProxy = 55621E7C1BD7259100D388B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55621E711BD7259100D388B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55621E721BD7259100D388B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		5027B9B11BDC69BE00D3F7FC /* Debug */ = {
+		5027B9D31BDC72AA00D3F7FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TVPickerViewFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.TVPickerViewFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5027B9D41BDC72AA00D3F7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TVPickerViewFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.TVPickerViewFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55621E821BD7259100D388B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -170,7 +384,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -194,12 +407,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		5027B9B21BDC69BE00D3F7FC /* Release */ = {
+		55621E831BD7259100D388B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -217,7 +428,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -234,67 +444,96 @@
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		5027B9B41BDC69BE00D3F7FC /* Debug */ = {
+		55621E851BD7259100D388B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TVPickerView/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.TVPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		5027B9B51BDC69BE00D3F7FC /* Release */ = {
+		55621E861BD7259100D388B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TVPickerView/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.TVPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		55621E881BD7259100D388B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TVPickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.TVPickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVPickerView.app/TVPickerView";
+			};
+			name = Debug;
+		};
+		55621E891BD7259100D388B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TVPickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.TVPickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVPickerView.app/TVPickerView";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5027B9A51BDC69BE00D3F7FC /* Build configuration list for PBXProject "TVPickerView" */ = {
+		5027B9D51BDC72AA00D3F7FC /* Build configuration list for PBXNativeTarget "TVPickerViewFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5027B9B11BDC69BE00D3F7FC /* Debug */,
-				5027B9B21BDC69BE00D3F7FC /* Release */,
+				5027B9D31BDC72AA00D3F7FC /* Debug */,
+				5027B9D41BDC72AA00D3F7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55621E651BD7259100D388B5 /* Build configuration list for PBXProject "TVPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55621E821BD7259100D388B5 /* Debug */,
+				55621E831BD7259100D388B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5027B9B31BDC69BE00D3F7FC /* Build configuration list for PBXNativeTarget "TVPickerView" */ = {
+		55621E841BD7259100D388B5 /* Build configuration list for PBXNativeTarget "TVPickerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5027B9B41BDC69BE00D3F7FC /* Debug */,
-				5027B9B51BDC69BE00D3F7FC /* Release */,
+				55621E851BD7259100D388B5 /* Debug */,
+				55621E861BD7259100D388B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55621E871BD7259100D388B5 /* Build configuration list for PBXNativeTarget "TVPickerViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55621E881BD7259100D388B5 /* Debug */,
+				55621E891BD7259100D388B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5027B9A21BDC69BE00D3F7FC /* Project object */;
+	rootObject = 55621E621BD7259100D388B5 /* Project object */;
 }

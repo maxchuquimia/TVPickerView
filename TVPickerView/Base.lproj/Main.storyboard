@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TVPickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6O-2j-FIe">
+                                <rect key="frame" x="724" y="81" width="472" height="86"/>
+                                <animations/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="TVPickerView Example"/>
+                                <connections>
+                                    <action selector="topButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="CD7-ZU-AEb"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAk-Zx-U7V" customClass="TVPickerView" customModule="TVPickerView" customModuleProvider="target">
+                                <rect key="frame" x="760" y="259" width="400" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Vbb-jV-ow7"/>
+                                    <constraint firstAttribute="width" constant="400" id="m7C-iH-G5u"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When the picker is in focus, click to allow content selection. You can then swipe between items, or use the arrow buttons" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6f-yP-mcn">
+                                <rect key="frame" x="710" y="432" width="500" height="139"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="qHa-kt-9rz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6j-yv-zrj">
+                                <rect key="frame" x="648" y="621" width="195" height="86"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="GWt-OQ-des"/>
+                                    <constraint firstAttribute="height" constant="86" id="btm-nS-7wm"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="First"/>
+                                <connections>
+                                    <action selector="firstButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="zbi-JB-me1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUf-xf-JnN">
+                                <rect key="frame" x="863" y="621" width="195" height="86"/>
+                                <animations/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Mid"/>
+                                <connections>
+                                    <action selector="midButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="cle-x8-4kE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwa-kW-Qlo">
+                                <rect key="frame" x="1078" y="621" width="195" height="86"/>
+                                <animations/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Last"/>
+                                <connections>
+                                    <action selector="lastButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="2vH-Vm-X18"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0i-f5-Z9z">
+                                <rect key="frame" x="840" y="788" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting...." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnL-IZ-0nI">
+                                        <rect key="frame" x="82" y="54" width="76" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wnL-IZ-0nI" firstAttribute="centerY" secondItem="T0i-f5-Z9z" secondAttribute="centerY" id="WQA-Da-ChO"/>
+                                    <constraint firstAttribute="height" constant="128" id="jSX-Oz-d4o"/>
+                                    <constraint firstItem="wnL-IZ-0nI" firstAttribute="centerX" secondItem="T0i-f5-Z9z" secondAttribute="centerX" id="oOp-TB-BEW"/>
+                                    <constraint firstAttribute="width" constant="240" id="pdh-j1-Fk9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9n-PL-G9g">
+                                <rect key="frame" x="840" y="924" width="240" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Index Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcq-7u-yS9">
+                                        <rect key="frame" x="45" y="14" width="150" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.7725490196" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="pcq-7u-yS9" firstAttribute="centerY" secondItem="G9n-PL-G9g" secondAttribute="centerY" id="NdL-za-HhE"/>
+                                    <constraint firstAttribute="width" constant="240" id="QV4-W5-3Ig"/>
+                                    <constraint firstItem="pcq-7u-yS9" firstAttribute="centerX" secondItem="G9n-PL-G9g" secondAttribute="centerX" id="Xi6-9H-OQB"/>
+                                    <constraint firstAttribute="height" constant="50" id="tDQ-sv-1lA"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These buttons only work properly on a real device. Not sure why." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MD5-TW-ung">
+                                <rect key="frame" x="713" y="715" width="494" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rwa-kW-Qlo" firstAttribute="leading" secondItem="IUf-xf-JnN" secondAttribute="trailing" constant="20" id="5t3-g6-h6o"/>
+                            <constraint firstItem="IUf-xf-JnN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7W3-XI-KRD"/>
+                            <constraint firstItem="nAk-Zx-U7V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ZB-Qs-pqv"/>
+                            <constraint firstItem="MD5-TW-ung" firstAttribute="top" secondItem="IUf-xf-JnN" secondAttribute="bottom" constant="8" id="9r1-dQ-tM7"/>
+                            <constraint firstItem="G9n-PL-G9g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BQD-0t-SJF"/>
+                            <constraint firstItem="E6f-yP-mcn" firstAttribute="top" secondItem="nAk-Zx-U7V" secondAttribute="bottom" constant="45" id="C6o-Yi-M2Y"/>
+                            <constraint firstItem="T0i-f5-Z9z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M3r-oX-Ldg"/>
+                            <constraint firstItem="nAk-Zx-U7V" firstAttribute="top" secondItem="k6O-2j-FIe" secondAttribute="bottom" constant="92" id="TKx-vU-Lor"/>
+                            <constraint firstItem="k6O-2j-FIe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="81" id="TkZ-mz-4KT"/>
+                            <constraint firstItem="g6j-yv-zrj" firstAttribute="width" secondItem="IUf-xf-JnN" secondAttribute="width" id="cSN-H8-xCs"/>
+                            <constraint firstItem="T0i-f5-Z9z" firstAttribute="top" secondItem="IUf-xf-JnN" secondAttribute="bottom" constant="81" id="e1X-ks-DDV"/>
+                            <constraint firstItem="E6f-yP-mcn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f5N-BX-9El"/>
+                            <constraint firstItem="g6j-yv-zrj" firstAttribute="height" secondItem="IUf-xf-JnN" secondAttribute="height" id="gGH-S0-SfY"/>
+                            <constraint firstItem="IUf-xf-JnN" firstAttribute="leading" secondItem="g6j-yv-zrj" secondAttribute="trailing" constant="20" id="huT-29-ev5"/>
+                            <constraint firstItem="MD5-TW-ung" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hzw-oc-sak"/>
+                            <constraint firstItem="k6O-2j-FIe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i1H-cW-dDy"/>
+                            <constraint firstItem="IUf-xf-JnN" firstAttribute="centerY" secondItem="g6j-yv-zrj" secondAttribute="centerY" id="iH2-b7-obf"/>
+                            <constraint firstItem="Rwa-kW-Qlo" firstAttribute="centerY" secondItem="IUf-xf-JnN" secondAttribute="centerY" id="jL1-dx-03x"/>
+                            <constraint firstItem="IUf-xf-JnN" firstAttribute="top" secondItem="E6f-yP-mcn" secondAttribute="bottom" constant="50" id="lKL-1q-fNE"/>
+                            <constraint firstItem="G9n-PL-G9g" firstAttribute="top" secondItem="T0i-f5-Z9z" secondAttribute="bottom" constant="8" id="vYY-Ob-FDz"/>
+                            <constraint firstItem="IUf-xf-JnN" firstAttribute="height" secondItem="Rwa-kW-Qlo" secondAttribute="height" id="xwn-P6-xbI"/>
+                            <constraint firstItem="IUf-xf-JnN" firstAttribute="width" secondItem="Rwa-kW-Qlo" secondAttribute="width" id="zbr-So-ljF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="liveView" destination="G9n-PL-G9g" id="Usy-D5-rJb"/>
+                        <outlet property="picker" destination="nAk-Zx-U7V" id="Lsw-w3-BEq"/>
+                        <outlet property="selectedLabel" destination="wnL-IZ-0nI" id="ter-3p-YOl"/>
+                        <outlet property="selectedView" destination="T0i-f5-Z9z" id="lP8-3E-6eB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477" y="265"/>
+        </scene>
+    </scenes>
+</document>
