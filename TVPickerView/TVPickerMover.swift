@@ -8,20 +8,20 @@
 
 import UIKit
 
-typealias MoverBlock = (CGFloat -> Void)
+typealias MoverBlock = ((CGFloat) -> Void)
 
 //TODO: Curve this parabolically
 
 class TVPickerMover: NSObject {
     
-    private var timer: NSTimer?
-    private var call: MoverBlock?
-    private var completed: dispatch_block_t?
-    private var stepDistance: CGFloat = 0.0
-    private var steps = 25
-    private var count = 0
+    fileprivate var timer: Timer?
+    fileprivate var call: MoverBlock?
+    fileprivate var completed: ()->() = { }
+    fileprivate var stepDistance: CGFloat = 0.0
+    fileprivate var steps = 25
+    fileprivate var count = 0
     
-    func startGenerating(time t: NSTimeInterval, totalDistance dx: CGFloat, call: MoverBlock, completed: dispatch_block_t? = nil) {
+    func startGenerating(time t: TimeInterval, totalDistance dx: CGFloat, call: @escaping MoverBlock, completed: @escaping ()->() = { } ) {
         
         stopGenerating()
         
@@ -31,7 +31,7 @@ class TVPickerMover: NSObject {
         self.completed = completed
         let time = t / Double(steps)
         
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(time, target: self, selector: "timerFired", userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: time, target: self, selector: #selector(TVPickerMover.timerFired), userInfo: nil, repeats: true)
     }
     
     func stopGenerating() {
@@ -47,7 +47,7 @@ class TVPickerMover: NSObject {
         
         if count >= steps {
             stopGenerating()
-            completed?()
+            completed()
         }
     }
 }

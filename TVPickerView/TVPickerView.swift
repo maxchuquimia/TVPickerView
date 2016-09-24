@@ -11,19 +11,19 @@ import QuartzCore
 
 //MARK: TVPickerView Class
 
-@objc public class TVPickerView: UIView, TVPickerInterface {
+@objc open class TVPickerView: UIView, TVPickerInterface {
     
-    weak public var focusDelegate: TVPickerViewFocusDelegate?
-    weak public var dataSource: TVPickerViewDataSource?
-    weak public var delegate: TVPickerViewDelegate?
+    weak open var focusDelegate: TVPickerViewFocusDelegate?
+    weak open var dataSource: TVPickerViewDataSource?
+    weak open var delegate: TVPickerViewDelegate?
     
-    static private let AnimationInterval: NSTimeInterval = 0.1
-    static private let SwipeMultiplier: CGFloat = 0.5
-    static private let MaxDrawn = 4
+    static fileprivate let AnimationInterval: TimeInterval = 0.1
+    static fileprivate let SwipeMultiplier: CGFloat = 0.5
+    static fileprivate let MaxDrawn = 4
     
-    private let mover = TVPickerMover()
-    private let contentView = UIView()
-    private let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
+    fileprivate let mover = TVPickerMover()
+    fileprivate let contentView = UIView()
+    fileprivate let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,9 +35,9 @@ import QuartzCore
         setup()
     }
     
-    private(set) public var deepFocus = false {
+    fileprivate(set) open var deepFocus = false {
         didSet {
-            UIView.animateWithDuration(TVPickerView.AnimationInterval, animations: deepFocus ? bringIntoDeepFocus : bringOutOfDeepFocus)
+            UIView.animate(withDuration: TVPickerView.AnimationInterval, animations: deepFocus ? bringIntoDeepFocus : bringOutOfDeepFocus)
             
             if deepFocus {
                 becomeFirstResponder()
@@ -48,7 +48,7 @@ import QuartzCore
         }
     }
     
-    private var currentIndex: Int = 0 {
+    fileprivate var currentIndex: Int = 0 {
         didSet {
             if currentIndex != oldValue {
                 delegate?.pickerView(self, didChangeToIndex: currentIndex)
@@ -56,20 +56,20 @@ import QuartzCore
         }
     }
     
-    public var selectedIndex: Int {
+    open var selectedIndex: Int {
         return currentIndex
     }
     
-    private var itemCount: Int = 0
-    private var indexesAndViews = [Int: UIView]()
+    fileprivate var itemCount: Int = 0
+    fileprivate var indexesAndViews = [Int: UIView]()
     
-    public func reloadData() {
+    open func reloadData() {
         
         guard let dataSource = dataSource else {
             return
         }
         
-        layoutMargins = UIEdgeInsetsZero
+        layoutMargins = UIEdgeInsets.zero
         
         itemCount = dataSource.numberOfViewsInPickerView(self)
         
@@ -83,7 +83,7 @@ import QuartzCore
         }
     }
     
-    private func loadFromIndex(index: Int) {
+    fileprivate func loadFromIndex(_ index: Int) {
         
         guard let dataSource = dataSource else {
             return
@@ -117,7 +117,7 @@ import QuartzCore
         scrollToNearestIndex(0.0)
 
         //Waiting fixes everything
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) {
             self.internalScrollToIndex(index, animated: true, multiplier: 2.0, speed: 0.1)
         }
     }
@@ -125,20 +125,20 @@ import QuartzCore
 
 extension TVPickerView {
     
-    private func setup() {
+    fileprivate func setup() {
         
         visualEffectView.sizeToView(self)
         visualEffectView.clipsToBounds = true
         addSubview(visualEffectView)
         
         contentView.sizeToView(self)
-        contentView.backgroundColor = .clearColor()
+        contentView.backgroundColor = .clear
         addSubview(contentView)
         
-        backgroundColor = .clearColor()
+        backgroundColor = .clear
         
-        layer.shadowColor = UIColor.blackColor().CGColor
-        layer.shadowOffset = CGSizeMake(0, 10)
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 10)
         layer.cornerRadius = 7.0
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 7.0
@@ -152,53 +152,53 @@ extension TVPickerView {
 
 extension TVPickerView {
     
-    override public func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-        super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
+    override open func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        super.didUpdateFocus(in: context, with: coordinator)
     
         if context.nextFocusedView == self {
-            UIView.animateWithDuration(TVPickerView.AnimationInterval, animations: bringIntoFocus)
+            UIView.animate(withDuration: TVPickerView.AnimationInterval, animations: bringIntoFocus)
         }
         else if context.previouslyFocusedView == self {
-            UIView.animateWithDuration(TVPickerView.AnimationInterval, animations: bringOutOfFocus)
+            UIView.animate(withDuration: TVPickerView.AnimationInterval, animations: bringOutOfFocus)
         }
     }
     
-    override public func shouldUpdateFocusInContext(context: UIFocusUpdateContext) -> Bool {
+    override open func shouldUpdateFocus(in context: UIFocusUpdateContext) -> Bool {
         return !deepFocus
     }
     
-    private func bringIntoFocus() {
+    fileprivate func bringIntoFocus() {
         layer.transform = CATransform3DMakeScale(1.2, 1.2, 1.0)
         layer.shadowRadius = 7.0
         layer.shadowOpacity = 0.2
         contentView.backgroundColor = UIColor(white: 1.0, alpha: 0.7)
     }
     
-    private func bringOutOfFocus() {
+    fileprivate func bringOutOfFocus() {
         layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
         layer.shadowRadius = 0.0
         layer.shadowOpacity = 0.0
-        contentView.backgroundColor = .clearColor()
+        contentView.backgroundColor = .clear
     }
     
-    private func bringIntoDeepFocus() {
+    fileprivate func bringIntoDeepFocus() {
         layer.transform = CATransform3DMakeScale(1.4, 1.4, 1.0)
         layer.shadowRadius = 15.0
         layer.shadowOpacity = 0.7
-        contentView.backgroundColor = .whiteColor()
+        contentView.backgroundColor = .white
         focusDelegate?.pickerView(self, deepFocusStateChanged: true)
     }
     
-    private func bringOutOfDeepFocus() {
+    fileprivate func bringOutOfDeepFocus() {
         bringIntoFocus()
         focusDelegate?.pickerView(self, deepFocusStateChanged: false)
     }
     
-    override public func canBecomeFocused() -> Bool {
+    override open var canBecomeFocused : Bool {
         return true
     }
     
-    override public func canBecomeFirstResponder() -> Bool {
+    override open var canBecomeFirstResponder : Bool {
         return true
     }
 }
@@ -207,8 +207,8 @@ extension TVPickerView {
 
 extension TVPickerView: UIGestureRecognizerDelegate {
     
-    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         
         if !deepFocus {
             return
@@ -217,8 +217,8 @@ extension TVPickerView: UIGestureRecognizerDelegate {
         mover.stopGenerating()
     }
     
-    override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesMoved(touches, withEvent: event)
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
     
         if !deepFocus {
             return
@@ -228,16 +228,16 @@ extension TVPickerView: UIGestureRecognizerDelegate {
             return
         }
         
-        let lastLocation = touch.previousLocationInView(self)
-        let thisLocation = touch.locationInView(self)
+        let lastLocation = touch.previousLocation(in: self)
+        let thisLocation = touch.location(in: self)
         
         let dx = thisLocation.x - lastLocation.x
         
         iterate(dx)
     }
     
-    override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         
         if !deepFocus {
             return
@@ -246,14 +246,14 @@ extension TVPickerView: UIGestureRecognizerDelegate {
         scrollToNearestIndex(0.3)
     }
     
-    override public func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        super.pressesBegan(presses, withEvent: event)
+    override open func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        super.pressesBegan(presses, with: event)
         
         guard let press = presses.first else {
             return
         }
         
-        if press.type == .Select {
+        if press.type == .select {
             let changedValue = !deepFocus
             
             if !changedValue {
@@ -269,9 +269,9 @@ extension TVPickerView: UIGestureRecognizerDelegate {
             
         switch press.type {
             
-        case .UpArrow, .RightArrow:
+        case .upArrow, .rightArrow:
             iterateForwards()
-        case .DownArrow, .LeftArrow:
+        case .downArrow, .leftArrow:
             iterateBackwards()
         default:
             break
@@ -283,13 +283,13 @@ extension TVPickerView: UIGestureRecognizerDelegate {
 
 extension TVPickerView {
     
-    func iterate(dx: CGFloat) {
+    func iterate(_ dx: CGFloat) {
         
         for (_, v) in indexesAndViews {
             
             let newViewX = dx * TVPickerView.SwipeMultiplier + CGFloat(v.center.x)
             
-            let containerCenter = CGPointMake(bounds.width / 2.0, bounds.height / 2.0)
+            let containerCenter = CGPoint(x: bounds.width / 2.0, y: bounds.height / 2.0)
             let vdx = min(fabs(containerCenter.x - newViewX) / containerCenter.x, 1.0)
 
             v.setX(newViewX, vdx)
@@ -316,7 +316,7 @@ extension TVPickerView {
         internalScrollToIndex(currentIndex - 1, animated: true, multiplier: 1.0, speed: 0.1)
     }
     
-    private func scrollToNearestIndex(speed: NSTimeInterval, uncancellable: Bool = false) {
+    fileprivate func scrollToNearestIndex(_ speed: TimeInterval, uncancellable: Bool = false) {
         
         let (locatedIndex, offset) = nearestViewToCenter()
  
@@ -330,10 +330,10 @@ extension TVPickerView {
         })
     }
     
-    private func nearestViewToCenter() -> (index: Int, distance: CGFloat) {
+    fileprivate func nearestViewToCenter() -> (index: Int, distance: CGFloat) {
         let targetX = bounds.width / 2.0
         var locatedIndex = 0
-        var smallestDistance = CGFloat.max
+        var smallestDistance = CGFloat.greatestFiniteMagnitude
         var offset: CGFloat = 0.0
         for (idx, v) in indexesAndViews {
             let x = v.center.x
@@ -355,12 +355,12 @@ extension TVPickerView {
         return (locatedIndex, offset)
     }
     
-    public func scrollToIndex(idx: Int) {
+    public func scrollToIndex(_ idx: Int) {
         scrollToIndex(idx, animated: true)
     }
     
     //TODO: animated doesn't work. Fix it and make it public
-    private func scrollToIndex(idx: Int, animated: Bool) {
+    fileprivate func scrollToIndex(_ idx: Int, animated: Bool) {
 
         let di = abs(idx - currentIndex)
         var a = animated
@@ -372,7 +372,7 @@ extension TVPickerView {
         internalScrollToIndex(idx, animated: a, multiplier: 2.0, speed: 0.2)
     }
     
-    private func internalScrollToIndex(idx: Int, animated: Bool, multiplier: CGFloat, speed: NSTimeInterval) {
+    fileprivate func internalScrollToIndex(_ idx: Int, animated: Bool, multiplier: CGFloat, speed: TimeInterval) {
         
         if !animated {
             loadFromIndex(idx)
@@ -387,7 +387,7 @@ extension TVPickerView {
         })
     }
     
-    private func xPositionForIndex(idx: Int) -> CGFloat {
+    fileprivate func xPositionForIndex(_ idx: Int) -> CGFloat {
         return ((CGFloat(idx) * frame.width) / CGFloat(2.0)) + frame.width / 2.0
     }
 }
@@ -396,13 +396,13 @@ extension TVPickerView {
 
 extension TVPickerView {
 
-    private func calculate() {
+    fileprivate func calculate() {
         
         guard let dataSource = dataSource else {
             return
         }
         
-        let indexesDrawn: [Int] = indexesAndViews.keys.map {$0}.sort(<)
+        let indexesDrawn: [Int] = indexesAndViews.keys.map {$0}.sorted(by: <)
         
         if indexesDrawn.count < TVPickerView.MaxDrawn {
         
@@ -417,7 +417,7 @@ extension TVPickerView {
             return
         }
         
-        guard let n = indexesDrawn.indexOf(locatedIndex) else {
+        guard let n = indexesDrawn.index(of: locatedIndex) else {
             return
         }
         
@@ -444,7 +444,7 @@ extension TVPickerView {
         }
         
         let reusingView = indexesAndViews[reuseIndex]
-        indexesAndViews.removeValueForKey(reuseIndex)
+        indexesAndViews.removeValue(forKey: reuseIndex)
         
         let newView = dataSource.pickerView(self, viewForIndex: newIndex, reusingView: reusingView)
         indexesAndViews[newIndex] = newView
