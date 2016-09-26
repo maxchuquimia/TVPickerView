@@ -15,12 +15,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectedLabel: UILabel!
     @IBOutlet weak var liveView: UIView!
 
+    fileprivate var isPickerLoaded: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.focusDelegate = self
         picker.dataSource = self
         picker.delegate = self
-        picker.reloadData()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if !isPickerLoaded {
+            picker.reloadData()
+            isPickerLoaded = true
+        }
     }
     
     let colors: [UIColor] = [
