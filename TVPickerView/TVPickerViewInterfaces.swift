@@ -32,7 +32,7 @@ public protocol TVPickerInterface {
     /*!
     Scroll the picker to a particular index. **This may not work on the simulator!**
     */
-    func scrollToIndex(idx: Int)
+    func scrollToIndex(_ idx: Int)
 }
 
 public protocol TVPickerViewFocusDelegate: class {
@@ -43,7 +43,7 @@ public protocol TVPickerViewFocusDelegate: class {
     - parameter picker:      the picker
     - parameter isDeepFocus: `true` if the picker is becoming the first responder
     */
-    func pickerView(picker: TVPickerView, deepFocusStateChanged isDeepFocus: Bool)
+    func pickerView(_ picker: TVPickerView, deepFocusStateChanged isDeepFocus: Bool)
 }
 
 public protocol TVPickerViewDelegate: class {
@@ -54,7 +54,7 @@ public protocol TVPickerViewDelegate: class {
     - parameter picker: the picker
     - parameter index:  the index
     */
-    func pickerView(picker: TVPickerView, didChangeToIndex index: Int)
+    func pickerView(_ picker: TVPickerView, didChangeToIndex index: Int)
 }
 
 public protocol TVPickerViewDataSource: class {
@@ -66,7 +66,7 @@ public protocol TVPickerViewDataSource: class {
     
     - returns: the number of views in the picker (unsigned)
     */
-    func numberOfViewsInPickerView(picker: TVPickerView) -> Int
+    func numberOfViewsInPickerView(_ picker: TVPickerView) -> Int
     
     /*!
     Returns the view for a particular index in the picker
@@ -76,5 +76,5 @@ public protocol TVPickerViewDataSource: class {
     
     - returns: a view to load into the picker for the given index (unsigned)
     */
-    func pickerView(picker: TVPickerView, viewForIndex idx: Int, reusingView view: UIView?) -> UIView
+    func pickerView(_ picker: TVPickerView, viewForIndex idx: Int, reusingView view: UIView?) -> UIView
 }

@@ -17,12 +17,12 @@ extension UIView {
     
     - returns: the receiver
     */
-    func setupForPicker(picker: TVPickerView) -> Self {
+    func setupForPicker(_ picker: TVPickerView) -> Self {
         translatesAutoresizingMaskIntoConstraints = true
-        autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
+        autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
-        let size = CGSizeMake(CGRectGetWidth(picker.bounds) / 2.0, CGRectGetHeight(picker.bounds))
-        frame = CGRectMake(0, 0, size.width, size.height)
+        let size = CGSize(width: picker.bounds.width / 2.0, height: picker.bounds.height)
+        frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         
         return self
     }
@@ -33,14 +33,14 @@ extension UIView {
     - parameter x:  the actual center x position of the view
     - parameter dx: the distance from the normal position to the offset position, from 0 to 1
     */
-    func setX(x: CGFloat, _ dx: CGFloat) {
+    func setX(_ x: CGFloat, _ dx: CGFloat) {
         center.x = x
         let scaleAmount = (1 - max(dx, 0.65)) + 0.65
         layer.transform = CATransform3DMakeScale(1.0 * scaleAmount, 1.0 * scaleAmount, 1.0)
     }
 
-    func sizeToView(v: UIView) {
+    func sizeToView(_ v: UIView) {
         frame = v.bounds
-        autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
 }
